@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _Switch
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write(" Wprowadz 1 , wyswietl 1 " +
+                "Wprowadz 2, wyswietl 2 ");
+            string xtoInt = Console.ReadLine();
+            int x;
+            int.TryParse(xtoInt, out x);
+            switch (x)
+            {
+                case 1:
+                    Console.WriteLine("Działa 1");
+                    break;
+                case 2:
+                    Console.WriteLine("Działa 2");
+                    break;
+                default:
+                    Console.WriteLine("Działa error");
+                    break;
+            }
+            int a= 2;
+            while (a-- > 0  )
+            { 
+                Console.WriteLine("eksplozja za " + a);
+                Console.WriteLine(" \"///---\\\"");
+                Console.WriteLine("s");
+               
+                Console.WriteLine("dział");   
+            }
+            
+            Console.ReadKey();
+        }
+    }
+ }

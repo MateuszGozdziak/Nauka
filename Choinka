@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Wybierz drogę pierwszą"); 
+            Console.WriteLine("Wybierz droge drugą");
+            Console.WriteLine("Wybierz drogę trzecią");
+            Console.WriteLine("Wybierz 1 , 2 lub 3 ");
+            back:
+                string xtoInt = Console.ReadLine();
+                int x;
+            //wartość szesnastkowa liczby 4095
+            Console.WriteLine(0xFFF);
+                int.TryParse(xtoInt, out x);
+                switch (x)
+                {
+                    case 1:
+                        Console.WriteLine("Działa 1");
+                        break;
+                    case 2:
+                        Console.WriteLine("Działa 2");
+                        break;
+                    default:
+                        Console.WriteLine("Podałeś złą liczbę");
+                    goto back;
+                        break;
+                }
+            //zastosowanie instrukcji goto
+            tu :
+            Console.WriteLine("Podaj liczbe od 0-10");
+            string boom = Console.ReadLine();
+            int a;
+            int.TryParse(boom, out a);
+            if (a >= 0 && a <= 10)
+            { // wpierw instrukcja pozniej warunek
+                while (a-- > 0)
+                {
+                    Console.WriteLine("Komputer wybuchnie za ");
+                    Console.WriteLine("eksplozja za " + a);
+                    Console.WriteLine("[<=>]");
+                }
+            }
+          
+            else
+            {
+                Console.WriteLine("Podaj Prawidłową liczbe ");
+                //powrot do poczatku etykieta tu:
+            goto tu;
+            }
+            
+            //Console.Clear();
+            Console.WriteLine("podaj słowo z kot");
+            String słowo = Console.ReadLine();
+            if ( słowo.Contains("kot"))
+            {
+                Console.WriteLine("działa");
+            }
+            string toParse = Console.ReadLine();
+            int gwiazdka;
+            int.TryParse(toParse, out gwiazdka); 
+            
+            int liczbaSpacji = gwiazdka - 1;
+            for(int i=0; i<=gwiazdka; i++)
+            {
+                for(int k = 0; k<=liczbaSpacji; k++)
+                {
+                    Console.Write(" ");
+                }
+                liczbaSpacji--;
+                for (int j = 0; j <= 2 * (i - 1) + 1; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine(" ");
+            }
+          
+                Console.ReadKey();
+
+        }
+
+    }
+
+}

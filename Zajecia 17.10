@@ -1,0 +1,129 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Zadanko
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			/*napisz program który za pomoca funkcji do... while
+			 * dla danych wartosci zmieniajacych sie w przedziale od 0 d0 15 oblicza wartośc funkcji y=4x
+			 */
+			int y = 0, x = 0;
+			do
+			{
+				y = 4 * x;
+				Console.WriteLine();
+				x++;
+			} while (x <= 15);
+			//napisz program znajdujący sie powyżej za pomoca petli while
+			x = 0;
+			y = 0;
+			while (x <= 15)
+			{
+				y = 4 * x;
+				Console.WriteLine("x= {0} \ty = {1}", x, y);
+				x++;
+			}
+
+			//Napisz program ktory za pomoca intrukcji while dla danych wartosci 
+			// x zmieniajacych sie w przedziale od 1 do 50 obliczy ich sume i wyswietli ich sume
+			int suma = 0;
+			x = 1;
+			while (x <= 50)
+			{
+				suma += x;
+				Console.WriteLine(suma);
+				x++;
+			}
+			//napisz tabliczke mnozenia
+			for (int i = 0; i <= 10; i++)
+			{
+				for (int j = 0; j <= 10; j++)
+				{
+					Console.Write(i * j + " ");
+				}
+				Console.WriteLine(" ");
+			}
+			///napisz program który za pomocą petli for zsumuje liczby nieparzyste  przedziału od 1 do 10
+			int z = 1;
+			int dodac = 1;
+			for (z = 1; z <= 10; z++)
+			{
+				if (z % 2 != 0)
+				{
+					Console.WriteLine(z + z++);
+
+					Console.WriteLine(dodac);
+				}
+			}
+
+			//Wykorzystująć pętle do while zrob tabliczke mnozenia
+			/*
+			 * /*napisz program który za pomoca funkcji do... while
+			 * dla danych wartosci zmieniajacych sie w przedziale od 0 d0 15 oblicza wartośc funkcji y=4x
+			 
+			int y = 0, x = 0;
+			do
+			{
+				y = 4 * x;
+				Console.WriteLine();
+				x++;
+			} while (x <= 15);
+			//napisz program znajdujący sie powyżej za pomoca petli while
+			x = 0;
+			y = 0;
+			while (x <= 15)
+			{
+				y = 4 * x;
+				Console.WriteLine("x= {0} \ty = {1}", x, y);
+				x++;
+			}
+			*/
+			Console.WriteLine("*******************************************************************************");
+			int q = 0;
+			int w = 0;
+			do
+			{
+				q++;
+				w++;
+				int e = q * w;
+				Console.WriteLine(e);
+			}
+			while (q < 10);
+			q++;
+			Console.WriteLine();
+			/*int n = 10,row , col ;
+			 * row = 1;
+			 *	do{
+			 *		col = 1;
+			 *		do{
+			 *			Console.Write(row*col + "\t" );
+			 *			col++;
+			 *			}while(col <= n);
+			 *			row++;
+			 *			Console.WriteLine();
+			 *			}while(row<=n);
+			 *			
+			 *			
+			 * 
+			 */
+			//Napisz ProgramKtory wyswietli Duzelitery alfabetu od A do Z i od Z do A
+			for (int i = 1; i <= 10; i++) {
+				if (i == 3 || i == 6 || i == 7)
+					continue;
+				else
+				Console.WriteLine("{0}", i);
+
+
+
+			}
+			Console.ReadKey();
+		}
+	}
+}
+

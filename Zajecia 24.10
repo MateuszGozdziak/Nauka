@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //foreach za pomocą petli for
+            int[] tab = new int[8] { 1, 2, 3, 4, 5, 6, 7, 8 };
+            for (int i = 0; i < tab.Length; i++)
+            {
+                Console.Write(tab[i] + " ");
+            }
+            foreach (int value in tab)
+            {
+                Console.Write(value);
+            }
+            Console.WriteLine("\n");
+            int j = 0;
+            int size = tab.Length;
+            size--;
+            foreach (int value in tab)
+            {
+                if (j == 0)
+                {
+                    Console.WriteLine(tab[0]);
+                }
+                else if (j == size)
+                {
+                    Console.WriteLine(tab[size]);
+                }
+                else
+                {
+                    Console.WriteLine(tab[j]);
+                }
+                j++;
+            }
+            //utworz tablice n elementowa ktorej rozmiar podaje uzytkowni kz klawiatury
+            //uzytkowanik podaaje ulubione kolory z klawiatury
+            // wywietl kolory w formacie 
+            // Kolor1;//pytamy w petli
+            Console.WriteLine("Ile masz ulubionych kolorow");
+            string nKolorow = Console.ReadLine();
+            byte count;
+            while (byte.TryParse(nKolorow, out count) == false) ;
+            string[] colors = new string[count];
+            //potwierzdzenie petli 
+            Console.WriteLine("\nilość {0}", colors.Length);
+            string color;
+            for (int i = 0; i < count; i++)
+            {
+                
+                Console.WriteLine("Podaj kolor");
+                color = Console.ReadLine();
+                colors[i] = color;
+
+
+            }
+            byte x = 0, y;
+            while (x < colors.Length) { 
+                
+                y = x;
+                y++;
+                Console.WriteLine("Kolor{0}: {1}" ,y ,colors[x] );
+                x++;
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+            Console.ReadKey();
+        }
+
+
+    }
+}
+
+// pierwszy element 
+//kolejne elemnty
+//ostatni element

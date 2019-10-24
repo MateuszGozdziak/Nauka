@@ -1,0 +1,94 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //tablice prostokątne
+            int[,] tab = new int[,]
+            {
+                {1,2,3,4 },
+                {5,6,7,8 },
+                {9,10,11,12 },
+                {13,14,15,16 }
+            };
+
+            //wiersze
+            int lenght = tab.Length;
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+
+                    Console.Write(tab[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("******************************************");
+
+            int[,] tablica = new int[3,3]
+            {
+                {1,2,3,},
+                {4,5,6 },
+                {7,8,9, }
+
+            };
+             lenght = tab.Length;
+            for (int i = 0; i < tablica.GetLength(0); i++)
+            {
+                for (int j = 0; j<tablica.GetLength(1) ; j++)
+                {
+                    tablica[i, j] = i * 3 + j ;
+                    
+                    Console.Write(tablica[i,j] + "\t");
+                }
+                Console.WriteLine();
+            }
+            //Console.WriteLine(numbers.GetLehght(0));
+            //wiersze
+            // do zrobienia w foreachu
+            //deklaracja tablicy dwuwymniarowaej nieregularnej
+            string[][] country = new string[4][];
+            Console.WriteLine("Rozmiar zewnętrznego wymiaru tablicy nieregularnej{0}" , country.Length);
+
+
+            int[][] number = new int[3][]
+                { new int[]{ 1},
+                new int[] { 1,2,3,4,5 },
+                new int[] { 6,7}
+                };
+            for (int i = 0; i < number.GetLength(0); i++)
+            {
+                for (int j = 0; j < number[i].Length; j++)
+                {
+                    Console.WriteLine("number[{0}][{1}] = {2}" ,i,j, number[i][j]);
+                    //number[i,] = i<=5;
+                    //number[, j] = j<=7;
+                }
+            }
+            //number[0, 0] = 1;
+            //number[1, 0] = 2;
+            //number[1, 1] = 3;
+            //number[1, 2] = 4;
+            //number[1, 3] = 5;
+            //number[2, 0] = 6;
+            //number[2, 1] = 7;
+            Console.ReadKey();
+        }
+
+
+    }
+}
+
+// pierwszy element 
+//kolejne elemnty
+//ostatni element
+// utworz tablice o wymiarach 3x3 i zainicjalizuj ją danymi
+// i * 3 + j

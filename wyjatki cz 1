@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            uint number;
+            while (true)
+            {
+                Console.Write("Podaj liczbe całkowita:");
+                string x = Console.ReadLine();
+                try
+                {
+                     number = uint.Parse(x);
+                    break;
+
+
+
+                    //break;
+                }
+                catch (SystemException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                Console.WriteLine("Podaj raz jescze liczbe calkowita\n\n");
+                }
+
+            Console.WriteLine("Liczba całkowita wynosi: {0}" , number );
+
+
+            Console.ReadKey();
+        }
+    }
+}

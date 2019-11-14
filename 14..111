@@ -1,0 +1,133 @@
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;
+
+
+
+namespace ConsoleApp5
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            int a;
+
+            int b;
+
+            int x;
+
+            int suma;
+
+            while (true)
+
+            {
+                try
+                {
+
+                    Console.WriteLine("Podaj liczbe a: ");
+
+                    string a1 = Console.ReadLine();
+
+                    a = int.Parse(a1);
+
+                    Console.WriteLine("Podaj liczbe b: ");
+
+                    string b1 = Console.ReadLine();
+
+                    b = int.Parse(b1);
+
+                    Console.WriteLine("Wybierz instrukcje");
+
+                    Console.WriteLine("Wybierz instrukcje 1 aby dodac ");
+
+                    Console.WriteLine("Wybierz instrukcje 2 aby odjąć ");
+
+                    Console.WriteLine("Wybierz instrukcje 3 aby pomnożyć ");
+
+                    Console.WriteLine("Wybierz instrukcje 4 aby podzielic ");
+
+                    string x1 = Console.ReadLine();
+
+                    x = int.Parse(x1);
+
+
+
+
+
+                    Console.WriteLine("wybrana funkcja to {0} ", x);
+
+                    switch (x)
+
+                    {
+
+                        case 1:
+
+                            suma = a + b;
+
+                            Console.WriteLine("Wynik działania a + b to: {0} + {1} = {2} ", a, b, suma);
+
+                            break;
+
+                        case 2:
+
+                            suma = a - b;
+
+                            Console.WriteLine("Wynik działania a - b to: {0} - {1} = {2}", a, b, suma);
+
+                            break;
+
+                        case 3:
+
+                            suma = a * b;
+
+                            Console.WriteLine("Wynik działania a * b to: {0} * {1} = {2} ", a, b, suma);
+
+                            break;
+
+                        case 4:
+                            suma = a / b;
+                            Console.WriteLine("Wynik działania a / b to {0}/{1} = {2} ", a, b, suma);
+                            break;
+
+                        default:                           
+                            throw new ArgumentOutOfRangeException("Liczba powinna być z zakresu od 1-4");
+                            break;
+                    }
+                    break;
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Wprowadz liczbę w poprwanym formacie np. 4 ");
+                }
+                catch (OverflowException)
+                {                
+                    Console.WriteLine("wprowadzona liczba jest po za dopuszczalnym zakresem");
+                    Console.WriteLine("zakres liczb: <0;2 mld>");
+                }
+                catch (ArgumentNullException)
+                {
+                    Console.WriteLine("Pusta Wartośc");
+                    Console.WriteLine("wprowadz ponownie wartość");
+                }
+                catch (ArgumentOutOfRangeException)            
+                {
+                    Console.WriteLine("Wprowadz liczbe od 1-4");
+                }
+                Console.WriteLine("wprowadz ponownie wartość");
+            }
+            Console.ReadKey();
+        }
+    }
+}
